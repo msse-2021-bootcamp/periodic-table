@@ -12,14 +12,9 @@ function onElementClick() {
   }
   
   function addElementToTable(data, tableDiv) {
-    let elDiv = document.createElement('div')
-    let symbol = document.createTextNode(data.symbol)
-  
-    elDiv.appendChild(symbol)
-    elDiv.setAttribute('class', 'table-element')
-    elDiv.setAttribute('style', `grid-column:${data.col}; grid-row:${data.row};`)
+    let elDiv = document.getElementById(data.number)
+
     elDiv.setAttribute('data-number', data.number)
-    elDiv.setAttribute('href', data.url)
     tableDiv.appendChild(elDiv)
     elDiv.addEventListener('click', onElementClick)
   }
