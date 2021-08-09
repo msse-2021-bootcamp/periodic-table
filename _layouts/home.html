@@ -13,10 +13,12 @@ layout: default
           <meta charset="utf-8">
       </head>
       <body>
+
+          <script src="script/new_data.js"></script>
+          <script src="script/main.js"></script>
           <div id="container">
               <div id="center">
                   <div id="periodic-table">
-                  
                     {% assign element_list = "" | split: ',' %}
 
                     {% for page in site.pages %}
@@ -26,7 +28,7 @@ layout: default
                     {% for element in site.data.elements %}
                       {% assign element_url = "/elements/" | append: element.name | append: ".html" | downcase %}
                       {% if element_list contains element_url %} 
-                          <div class="table-element" style="grid-column:{{ element.col }}; grid-row:{{ element.row }}; background-color:#003262ff; color:#FDB515ff" id="{{ element.number }}" href="{{ element.url }}" >{{ element.symbol }}</div>
+                      <div class="table-element" style="grid-column:{{ element.col }}; grid-row:{{ element.row }}; background-color:#003262ff; color:#FDB515ff" id="{{ element.number }}" href="{{ element.url }}" >{{ element.symbol }}</div>
                       {% else %}
                       <div class="table-element" style="grid-column:{{ element.col }}; grid-row:{{ element.row }}; background-color:#ffffffff" id="{{ element.number }}" href="{{ element.url }}">{{ element.symbol }}</div>
 
