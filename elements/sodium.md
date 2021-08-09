@@ -3,5 +3,5 @@ layout: page
 title: Sodium
 ---
 
-
-Hello, world!
+Symbol : Na  
+Atomic Number : 11  
